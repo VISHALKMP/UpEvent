@@ -1,0 +1,204 @@
+.studentDashboard {
+  background: url('../../../assets/background.jpg') no-repeat center center/cover;
+  height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.studentDashboard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Light overlay */
+  backdrop-filter: blur(5px); /* Apply blur effect */
+  z-index: 1;
+}
+  
+.containt{
+  position: relative;
+  z-index: 2; /* Ensure content appears above the blur */
+}
+#navbar{
+  background:linear-gradient(155deg, #DBE2EF, #d7e9ff);
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease-in-out;
+}
+/* Logo and Branding */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand img {
+  height: 40px;
+  margin-right: 8px;
+}
+
+.navbar-brand:hover {
+  color: #007bff;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  margin: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #112D4E;
+  padding: 10px 16px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Active or Selected Link */
+.navbar-nav .nav-link.selected {
+  background:  #6caeff;
+  color: #ffffff;
+  border: 2px solid #4aa2ff; /* Adds blue border to selected tab */
+  outline: none;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background:  #3F72AF;
+  color: #ffffff;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+#signOut{
+  margin-top: 20px;
+  background-color: #ddd;
+  color: #112D4E;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#signOut{
+  color: #F9F7F7;
+  background-color: #ccc;
+  transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 12px 18px;
+  }
+  .navbar-nav {
+    margin-top: 12px;
+    text-align: center;
+  }
+  .navbar-nav .nav-link {
+    display: block;
+    padding: 12px;
+  }
+}
+.navbar-brand img {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+
+
+/* Section Headings */
+.studentDashboard .heading{
+  font-weight: 800;
+  color: black;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+
+.event-card {
+  position: relative;
+  width: 100%;
+  height: 300px; 
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 20px;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Improved readability */
+}
+
+/* Text Content */
+.card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 85%;
+  text-align: left;
+  z-index: 2;
+}
+
+/* Title */
+.card-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: white;
+}
+
+/* Date */
+.card-date {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #ff0000; /* Elegant gold */
+}
+
+
+.event-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* Buttons */
+.btn-outline-danger {
+  border-radius: 22px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid #dc3545;
+  color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(220, 53, 69, 0.3);
+}
+
